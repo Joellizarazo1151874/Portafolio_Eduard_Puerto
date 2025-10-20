@@ -450,15 +450,15 @@
           <h5>Menu</h5>
           <ul>
             <li>
-              <a href="index.html" data-page="home"><i></i>Articulos</a>
+              <a href="index.html" data-page="home" onclick="window.location.href=this.href;return false;"><i></i>Articulos</a>
             </li>
             <li>
-              <a href="about.html" class="active" data-page="about"
+              <a href="about.html" class="active" data-page="about" onclick="window.location.href=this.href;return false;"
                 ><i></i>Acerca de mí</a
               >
             </li>
             <li>
-              <a href="contact.html" data-page="contact"><i></i>Contacto</a>
+              <a href="contact.html" data-page="contact" onclick="window.location.href=this.href;return false;"><i></i>Contacto</a>
             </li>
             <li>
               <a href="https://scholar.google.com/citations?user=nrGxjq4AAAAJ&hl=es" target="_blank"
@@ -1233,7 +1233,7 @@
           <div
             class="col-sm-6-6 col-md-12-12 col-smd-12-12 col-lg-12-12 copyright"
           >
-            <a href="home.html" class="internal">
+            <a href="index.html" class="internal">
               <svg
                 version="1.0"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1274,7 +1274,7 @@
         HOME: {
           name: "home",
           class: "home",
-          partial: "partials/home.html",
+          partial: "partials/index.html",
           data: "resources/home.json",
           title: "Portfolio | Eduard Puerto - Freelance Web & UI Designer",
           description:
