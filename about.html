@@ -70,6 +70,7 @@
       href="assets/favicon/apple-touch-icon-180x180.html"
     />
 
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
     <link
       rel="icon"
       type="image/png"
@@ -199,6 +200,15 @@
         }
         window.addEventListener('load', toggleLogoVisibility);
         window.addEventListener('scroll', toggleLogoVisibility, { passive: true });
+
+        // Deshabilitar SPA siempre (GitHub Pages)
+        $(function(){
+          $("a.internal").removeClass("internal");
+          $("body").off("click", "a.internal");
+          var $navScope = $("nav#nav,#nav-overlay-content");
+          $navScope.find("ul > li a, a.logo").off("click");
+          console.log('SPA deshabilitada para navegación estática');
+        });
       })();
     </script>
   </head>
